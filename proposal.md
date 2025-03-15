@@ -4,22 +4,90 @@ Created by Tyron O. and Taylor M.
 
 ## 🚀 Mission statement
 
-Our application, OTAKU Arena is for [target audience]. It allows users to [what it does and why audience would use it]
+Our application, OTAKU Arena, is for anime lover of all kind. It allows users to decide who is the strongest in all of the anime universe. This application would put an end to the question 'Who would win' in a fun and exciting way
 
 ## API & React Router
 
-This application will use the [name of API] API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
+This application will use the Jikan API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
-- Link to API documentation: [Link goes here]
-- API endpoint #1
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #2
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #3
-  - Description of endpoint
-  - List of data values used by the endpoint
+- Link to API documentation: https://docs.api.jikan.moe/
+
+- https://api.jikan.moe/v4/characters/{id}
+  - This will allow us to an anime MC's image
+
+```
+{
+  "data": {
+  "mal_id": 0,
+  "url": "string",
+  "images": {},
+  "name": "string",
+  "name_kanji": "string",
+  "nicknames": [],
+  "favorites": 0,
+  "about": "string"
+}
+}
+```
+
+- https://api.jikan.moe/v4/characters/{id}/anime
+- This endpoint will get us the name of the MCs anime
+
+```
+{
+  "data": [
+        {
+            "role": "string",
+            "anime": {
+                        "mal_id": 0,
+                        "url": "string",
+                        "images": {},
+                        "title": "string"
+                      }
+                  }
+            ]
+    }
+
+```
+
+- https://api.jikan.moe/v4/random/manga
+- This will give us a random manga
+
+```
+{
+  "data": {
+  "mal_id": 0,
+  "url": "string",
+  "images": {},
+  "approved": true,
+  "titles": [],
+  "title": "string",
+  "title_english": "string",
+  "title_japanese": "string",
+  "type": "Manga",
+  "chapters": 0,
+  "volumes": 0,
+  "status": "Finished",
+  "publishing": true,
+  "published": {},
+  "score": 0,
+  "scored_by": 0,
+  "rank": 0,
+  "popularity": 0,
+  "members": 0,
+  "favorites": 0,
+  "synopsis": "string",
+  "background": "string",
+  "authors": [],
+  "serializations": [],
+  "genres": [],
+  "explicit_genres": [],
+  "themes": [],
+  "demographics": []
+  }
+  }
+
+```
 
 [If your API requires an API key, say so here.]
 
