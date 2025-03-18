@@ -1,11 +1,14 @@
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar">
-        <div className="nav-title">
-          <h1>OTAKU ARENA</h1>
+      <div className="navbar">
+        <div className="brand-name">
+          <h2>Otaku Arena</h2>
         </div>
-      </nav>
+        <div id="rules-button">
+          <button>Rules</button>
+        </div>
+      </div>
     </>
   );
 };
