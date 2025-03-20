@@ -3,15 +3,21 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import NavBar from "./component/Navbar";
-
+import CharBoxes from "./pageTwo/actionPage";
+// import
+/////////////////////////////////////////////
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
       <NavBar />
+      <br></br>
+      <br></br>
+      <br></br>
+      <CharBoxes></CharBoxes>
     </>
   );
 }
-
+//////////////////////////////////////////////////
 export default App;
