@@ -1,12 +1,12 @@
-import noodle from '../../public/noodle.jpeg';
-import { Link } from 'react-router-dom';
+import noodle from "../../public/noodle.jpeg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
       <div className="navbar">
         <div className="brand-name">
-          <Link to={'/'}>
+          <Link to={"/"}>
             <img src={noodle} alt="Logo" id="logo" />
           </Link>
         </div>
