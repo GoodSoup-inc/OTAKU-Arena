@@ -1,42 +1,98 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
+}
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #110f0f33;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #3333;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: space-between;
+  border-bottom: 2.5px solid #000000;
+}
+
+#rules-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+button {
+  width: fit-content;
+  /* color: white; */
+  /* border: none; */
+  /* padding: 10px 20px; */
   text-align: center;
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.background-img {
+  /* max-height: 400px; */
+  width: 100%;
 }
 
-.card {
-  padding: 2em;
+.img-container {
+  position: relative; /* Set the container to relative positioning */
 }
 
-.read-the-docs {
-  color: #888;
+.background-img img {
+  /* width: 100%; */
+  /* height: 430px; */
+  object-fit: cover;
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  filter: blur(3.9px);
+}
+
+.welcome-text {
+  position: absolute;
+  border: 51px; /* Position the text relative to the container */
+  top: 39%; /* Center vertically */
+  padding: 10px;
+  left: 50%; /* Center horizontally */
+  background-color: #333;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust for the element's own dimensions */
+  color: rgb(233, 213, 213); /* Make the text visible on the image */
+  font-size: 34px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  padding-left: 7px;
 }
