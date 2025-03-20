@@ -1,27 +1,21 @@
-y
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import NavBar from "./component/Navbar";
-import CharBoxes from "./pageTwo/actionPage";
-import Bodyintro from './component/Bodyintro'
+// import { useState } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.css';
+import NavBar from './component/Navbar';
+import CharBoxes from './pageTwo/actionPage';
+import Bodyintro from './component/Bodyintro';
 import StartButton from './component/Start';
+import Homepage from './pageTwo/homepage';
 
-/////////////////////////////////////////////
+const router = createBrowserRouter([
+  { path: '/', element: <Homepage /> },
+  { path: '/actionPage', element: <CharBoxes /> },
+]);
+
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
-      <NavBar />
-      <br></br>
-    <Bodyintro />
-      <br></br>
-     <StartButton />
-      <br></br>
-    
-
+      <RouterProvider router={router} />
     </>
   );
 }

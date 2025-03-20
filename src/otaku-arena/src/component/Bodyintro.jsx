@@ -2,7 +2,7 @@ export default function Bodyintro() {
   return (
     <div className="img-container">
       <div className="background-img">
-        <img src="../../public/anime_mashup.jpeg" alt="" />
+        <img src="../public/anime_mashup.jpeg" alt="" />
         <h2 className="welcome-text">Welcome to OTAKU Arena</h2>
       </div>
     </div>
