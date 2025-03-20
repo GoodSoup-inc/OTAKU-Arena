@@ -1,11 +1,16 @@
+import noodle from '../../public/noodle.jpeg';
+
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar">
-        <div className="nav-title">
-          <h1>OTAKU ARENA</h1>
+      <div className="navbar">
+        <div className="brand-name">
+          <img src={noodle} alt="" id="logo" />
         </div>
-      </nav>
+        <div id="rules-button">
+          <button>Rules</button>
+        </div>
+      </div>
     </>
   );
 };
