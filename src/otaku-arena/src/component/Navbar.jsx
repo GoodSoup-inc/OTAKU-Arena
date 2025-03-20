@@ -1,4 +1,4 @@
-import noodle from '../../public/noodle.jpeg';
+import noodle from "../public/noodle.jpeg";
 
 const NavBar = () => {
   return (
