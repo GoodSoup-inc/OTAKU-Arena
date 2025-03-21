@@ -2,7 +2,7 @@ import fetchData from "../fetch/fetchData";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import NavBar from "../component/Navbar";
-import ClickLimiter from "./modal";
+
 // Function to get a random character ID
 function getRandomInt() {
   return Math.floor(Math.random() * 32037);
@@ -85,10 +85,14 @@ const CharBoxes = () => {
       {/* <ClickLimiter maxClicks={5}> */}
       <div id="charBoxes">
         <h1>{counter}</h1>
-        <div id="picOne" onClick={clickLeft}>
+        <div id="picOne" onClick={clickLeft} className="container">
           {/* Use optional chaining to avoid errors */}
           {mc ? (
-            <img src={mc.data?.images?.jpg?.image_url} alt="character" />
+            <img
+              src={mc.data?.images?.jpg?.image_url}
+              alt="character"
+              className="picture"
+            />
           ) : (
             "Click to load"
           )}
@@ -98,10 +102,14 @@ const CharBoxes = () => {
           <img alt="vsPic" src="./vsPicTwo.jpg" />
         </div>
 
-        <div id="picTwo" onClick={clickRight}>
+        <div id="picTwo" onClick={clickRight} className="container">
           {/* Use optional chaining to avoid errors */}
           {mcRight ? (
-            <img src={mcRight.data?.images?.jpg?.image_url} alt="character" />
+            <img
+              src={mcRight.data?.images?.jpg?.image_url}
+              alt="character"
+              className="picture"
+            />
           ) : (
             "Click to load"
           )}
