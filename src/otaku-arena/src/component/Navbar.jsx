@@ -5,7 +5,9 @@ const NavBar = () => {
     <>
       <div className="navbar">
         <div className="brand-name">
-          <img src={noodle} alt="" id="logo" />
+          <Link to={"/"}>
+            <img src={noodle} alt="Logo" id="logo" />
+          </Link>
         </div>
         <div id="rules-button">
           <button>Rules</button>
