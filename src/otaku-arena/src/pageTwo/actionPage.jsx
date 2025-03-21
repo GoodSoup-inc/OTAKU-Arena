@@ -125,7 +125,7 @@ const CharBoxes = () => {
         </div>
       </div>
       {/* </ClickLimiter> */}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
     </>
   );
 };
