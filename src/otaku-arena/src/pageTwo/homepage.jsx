@@ -1,6 +1,6 @@
-import Bodyintro from '../component/Bodyintro';
-import NavBar from '../component/Navbar';
-import StartButton from '../component/Start';
+import Bodyintro from "../component/Bodyintro";
+import NavBar from "../component/Navbar";
+import StartButton from "../component/Start";
 
 const Homepage = () => {
   return (

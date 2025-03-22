@@ -121,6 +121,14 @@ button {
   margin: 40px;
   background-color: rgb(250, 255, 255);
 }
+.container img {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* object-fit: contain; */
+  height: 200%;
+  width: 460%;
+}
 
 /* #vsPic {
   width: 0px;
