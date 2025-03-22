@@ -1,7 +1,7 @@
-import fetchData from "../fetch/fetchData";
-import { useEffect, useState } from "react";
-import { useRef } from "react";
-import NavBar from "../component/Navbar";
+import fetchData from '../fetch/fetchData';
+import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import NavBar from '../component/Navbar';
 
 // Function to get a random character ID
 function getRandomInt() {
@@ -10,12 +10,12 @@ function getRandomInt() {
 
 // Character VS Character Component
 const CharBoxes = () => {
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [mc, setMc] = useState(null);
   const [mcRight, setRight] = useState(null);
   const [winner, setWinner] = useState(null);
   const [counter, setCounter] = useState(0);
-  const randomUrl = "https://api.jikan.moe/v4/random/characters";
+  const randomUrl = 'https://api.jikan.moe/v4/random/characters';
 
   useEffect(() => {
     const doFetch = async () => {
@@ -84,7 +84,7 @@ const CharBoxes = () => {
       <NavBar />
       {/* <ClickLimiter maxClicks={5}> */}
       <div id="charBoxes">
-        <h1>{counter}</h1>
+        {/* <h1>{counter}</h1> */}
         <div id="picOne" onClick={clickLeft} className="container">
           {/* Use optional chaining to avoid errors */}
           {mc ? (
@@ -94,7 +94,7 @@ const CharBoxes = () => {
               className="picture"
             />
           ) : (
-            "Click to load"
+            'Click to load'
           )}
         </div>
 
@@ -111,13 +111,15 @@ const CharBoxes = () => {
               className="picture"
             />
           ) : (
-            "Click to load"
+            'Click to load'
           )}
         </div>
         <div id="modal">
           <dialog ref={dialogRef}>
-            <p>{winner ? winner.data.name : "name"}</p>
-            <p></p>
+            <h1>Winner</h1>
+            <p>{winner ? winner.data.name : 'name'}</p>
+            <p>{winner ? winner.data.about : 'about'}</p>
+
             <button autoFocus onClick={close}>
               Close
             </button>
