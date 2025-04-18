@@ -1,6 +1,6 @@
-import noodle from '../../public/noodle.jpeg';
-import { Link } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import noodle from "../../public/noodle.jpeg";
+import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 
 const NavBar = () => {
   const dialogRef = useRef(null);
@@ -17,7 +17,7 @@ const NavBar = () => {
     <>
       <div className="navbar">
         <div className="brand-name">
-          <Link to={'/'}>
+          <Link to={"/"}>
             <img src={noodle} alt="Logo" id="logo" />
           </Link>
         </div>
@@ -31,7 +31,7 @@ const NavBar = () => {
         <h2>Game Rules</h2>
         <p>1. Click start to the start the game</p>
         <p>
-          2. Select the anime characters that you believe would win the fight
+          2. Select the anime characters that you believe is more interesting
           `(there are only 5 rounds)`
         </p>
         <p>3. At the last round, enjoy the information about your winner</p>
