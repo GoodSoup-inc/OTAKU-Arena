@@ -1,7 +1,7 @@
-import fetchData from '../fetch/fetchData';
-import { useEffect, useState } from 'react';
-import { useRef } from 'react';
-import NavBar from '../component/Navbar';
+import fetchData from "../fetch/fetchData";
+import { useEffect, useState } from "react";
+import { useRef } from "react";
+import NavBar from "../component/Navbar";
 
 // Function to get a random character ID
 function getRandomInt() {
@@ -10,13 +10,27 @@ function getRandomInt() {
 
 // Character VS Character Component
 const CharBoxes = () => {
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [mc, setMc] = useState(null);
   const [mcRight, setRight] = useState(null);
   const [winner, setWinner] = useState(null);
   const [counter, setCounter] = useState(0);
-  const randomUrl = 'https://api.jikan.moe/v4/random/characters';
+  const randomUrl = "https://api.jikan.moe/v4/random/characters";
 
+  // useEffect(() => {
+  //   const doFetch = async () => {
+  //     let fetchDone = false;
+
+  //     while (!fetchDone) {
+  //       const [data1, fetchError1] = await fetchData(randomUrl);
+  //       const [data2, fetchError2] = await fetchData(randomUrl);
+  //     }
+  //     setRight(data1);
+  //     setMc(data2);
+  //     // console.log(data1);
+  //   };
+  //   doFetch();
+  // }, []);
   useEffect(() => {
     const doFetch = async () => {
       const [data1, fetchError1] = await fetchData(randomUrl);
@@ -94,7 +108,7 @@ const CharBoxes = () => {
               className="picture"
             />
           ) : (
-            'Click to load'
+            "Click to load"
           )}
         </div>
 
@@ -111,14 +125,14 @@ const CharBoxes = () => {
               className="picture"
             />
           ) : (
-            'Click to load'
+            "Click to load"
           )}
         </div>
         <div id="modal">
           <dialog ref={dialogRef}>
             <h1>Winner</h1>
-            <p>{winner ? winner.data.name : 'name'}</p>
-            <p>{winner ? winner.data.about : 'about'}</p>
+            <p>{winner ? winner.data.name : "name"}</p>
+            <p>{winner ? winner.data.about : "about"}</p>
 
             <button autoFocus onClick={close}>
               Close
